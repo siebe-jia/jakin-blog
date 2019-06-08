@@ -1,0 +1,188 @@
+/************
+ * 页面样式
+ ************/
+
+ /* =========
+    基本默认值
+    ========= */
+
+html {
+    font-size: 62.5%;
+    color: #222;
+}
+
+::selection {
+    background-color: #b3d4fc;
+    text-shadow: none;
+}
+
+ul {
+    margin: 0;
+    padding: 0;
+}
+
+li {
+    list-style: none;
+}
+ /* =========
+    工具样式
+    ========= */
+.conten-block{
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+}
+.pull-right {
+    float: right !important;
+}
+.pull-left {
+    left: left !important;
+}
+.text-right {
+    text-align: right !important;
+}
+.text-left {
+    text-align: left !important;
+}
+.text-center {
+    text-align: center !important;
+}
+.hide {
+    display: none !important;
+}
+.show {
+    display: block !important;
+}
+.invisible {
+    visibility: hidden;
+}
+.text-hide{
+    font:  0/0 a;
+    color:  transparent;
+    text-shadow: none;
+    background-color: transparent;
+    border: 0;
+}
+.clearfix:before,
+.clearfix:after {
+    content: "";
+    display: table;
+}
+.clearfix:after {
+    clear: both;
+}
+@media only screen and (max-width:50em) {
+
+}
+@media only screen and (min-width:30.0025em) and (max-width:50em) {
+    
+}
+@media only screen and (max-width:30em) {
+    
+}
+
+ /* =========
+    浏览器更新提示
+    ========= */
+.browserupgrade {
+    margin: 0;
+    padding: 1rem;
+    background: #ccc;
+}
+
+ /* =========
+    自定义页面样式
+    ========= */
+body {
+    font-size: 1.2rem;
+    line-height: 1.5;
+    background-color: #efefef;
+}
+
+a {
+    color: #666;
+    text-decoration: none;
+}
+
+a:hover, a:active {
+    color: #0ae;
+    text-decoration: none;
+}
+.current{
+    color: #0ae;
+}
+.slideUp { -webkit-transform: translateY(-100px); -ms-transform: translateY(-100px); -o-transform: translateY(-100px); transform: translateY(-100px); -webkit-transition: transform .5s ease-out; -o-transition: transform .5s ease-out; transition: transform .5s ease-out; }
+.slideDown { -webkit-transform: translateY(0); -ms-transform: translateY(0); -o-transform: translateY(0); transform: translateY(0); -webkit-transition: transform .5s ease-out; -o-transition: transform .5s ease-out; transition: transform .5s ease-out; }
+/*网站头部*/
+header {
+    position: fixed;
+    top: 0;
+    width: 100%;
+    background-color: rgba(255,255,255,0.9);
+    border-bottom: 1px solid #ddd;
+    box-shadow: 0 1px 1px rgba(0,0,0,0.04);
+    z-index: 9999;
+}
+header .top {
+    width: 1000px;
+    margin: 0 auto;
+    font-size: 1.6rem;
+    /*background-color: aqua;*/
+}
+header .top .logo {
+    float: left;
+    margin-right: 4rem;
+}
+header .top .logo a{
+    font-size: 2.2rem;
+    text-align: left;
+    line-height: 5.2rem;
+    text-decoration: none;
+}
+header .top .logo a:hover,
+header .top .logo a:active {
+    color: #111;
+}
+header .top ul {
+    float: left;
+}
+header .top ul li {
+    display: inline-block;
+}
+header .top ul li a{
+    display: inline-block;
+    padding: 0 1.5rem;
+    line-height: 5.2rem;
+    text-decoration: none;
+}
+header .top ul li a:hover,
+header .top ul li a:active {
+    color: #0ae;
+    background-color: #ededed;
+}
+header .top .search-form {
+    float: right;
+}
+header .top .search-form span {
+    display: inline-block;
+    padding: 0 1.5rem;
+    line-height: 5rem;
+}
+/* 底部 */
+footer {
+    width: 100%;
+}
+footer p {
+    text-align: center;
+    font-size: 16px;
+    font-style: normal;
+    color: #666;
+    line-height: 20px;
+}
+
+
+
+
+
+
+

@@ -1,0 +1,189 @@
+/*网站主要内容*/
+.container {
+    width: 1000px;
+    margin: 80px auto 20px;
+}
+/*网站左侧内容*/
+article {
+    width: 680px;
+    float: left;
+}
+.artilce{
+    width: 640px;
+    padding: 0 20px;
+    background-color: #FFF;
+}
+.artilce .title{
+    font-size: 2.5rem;
+    display: inline-block;
+}
+.artilce .info ul li{
+    display: inline-block;
+    padding: 0 15px;
+    color: #666666; 
+}
+.artilce .info ul li span {
+    padding: 0px;
+}
+.artilce .content p {
+    color: #666;
+    font-size: 1.6rem;
+}
+.artilce .share{
+    padding: 10px 20px;
+    background: #f7f7f7;
+    border-left: 3px solid #000;
+    overflow: hidden;
+    margin-bottom: 20px;
+}
+.artilce .share img {
+    width: 100px;
+    float: left;
+    margin-right: 20px;
+}
+.artilce .nextinfo{
+    color: #666;
+    font-size: 1.5rem;
+    line-height: 25px;
+    display: inline-block;
+}
+.artilce .nextinfo p a:hover{
+    text-decoration-line: underline;
+}
+.otherlink{
+    margin-top:20px;
+    width: 640px;
+    padding: 0 20px;
+    background-color: #FFF;
+}
+.otherlink .news-title{
+    border-bottom: #e4e3e3 1px solid;
+}
+.otherlink h2{
+    line-height:1.8rem;
+    display: inline-block;
+}
+.otherlink ul{
+    padding: 15px 0px;
+    line-height:2rem;
+    font-size: 1.5rem;
+}
+.otherlink ul li a:hover{
+    text-decoration-line: underline;
+}
+/*网站右侧内容*/
+.right-nav {
+    width: 300px;
+    float: right;
+}
+.right-nav section {
+    margin-bottom: 20px;
+    font-style: normal;
+}
+.right-nav section > span {
+    display: inline-block;
+    width: 100%;
+    line-height: 2.5rem;
+    background-color: #FFF;
+    font-size: 1.4rem;
+    font-weight: bold;
+    text-indent:1.5em;
+}
+/*精选话题*/
+.topic {
+    height: 408px;
+    background-color: #f7f7f7;
+}
+.topic li {
+    width: 100%;
+    height:200px; 
+    position: relative;
+}
+.topic li:last-child{
+    margin-top: 8px;
+}
+.topic li i{
+    display: block;
+    overflow: hidden;
+}
+.topic li i img {
+    width: 100%;
+    height: 200px;
+}
+.topic li i img:hover {
+    -webkit-filter: contrast(120%); /* Chrome, Safari, Opera */
+    filter: contrast(120%);
+    -webkit-filter: brightness(110%); /* Chrome, Safari, Opera */
+    filter: brightness(110%);
+}
+.topic li span {
+    display: block;
+    background: rgba(0,170,238,0.8); 
+    font-size: 12px;
+    font-style: normal;
+    border-radius: 3px;
+    padding: 5px 8px;
+    color: #FFF;
+    position: absolute;
+    top: 10px;
+    left: 10px;
+}
+.topic li h2 {
+    font-style: normal;
+    position: absolute;
+    bottom: 10px;
+    left: 10px;
+    color: #FFF;
+}
+/*文章分类*/
+.group ul {
+    padding: 10px 20px;
+    background-color: #f7f7f7;
+}
+.group ul li a {
+    line-height: 2.5rem;
+    font-size: 1.5rem;
+}
+/*点击排行与文章推荐*/
+.recommend span a:first-child {
+    padding-right: 1em;
+}
+.recommend span a:last-child {
+    padding-left: 1em;
+    border-left: 1px solid #ccc;
+}
+.recommend ul {
+    display: block;
+    padding: 10px 15px;
+    background-color: #f7f7f7;
+}
+.recommend ul li a{
+    display: block;
+    font-size: 1.5rem;
+    line-height: 2.5rem;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+.concern ul{
+    display: block;
+    width: 280px;
+    padding: 10px;
+    background-color: #f7f7f7;
+    overflow: hidden;
+}
+.concern ul img {
+    width: 100%;
+    transition: all 1s;  
+}
+.concern ul img:hover {
+    transform: scale(1.1);
+}
+
+
+
+
+
+
+
