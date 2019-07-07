@@ -52,7 +52,7 @@ article {
     transform: scale(1.2);
 }
 .news-box ul li h3 {
-    font-size: 1.5rem;
+    font-size: 1rem;
     font-weight: normal;
     text-shadow: #FFF 1px 1px 1px;
     display: table-cell;
@@ -71,7 +71,7 @@ article {
     display: inline-block;
     margin-left: 25px;
     line-height: 45px;
-    font-size: 1.5rem;
+    font-size: 1rem;
 }
 .blogtab ul li + li{
     margin-left: 40px;
@@ -95,210 +95,53 @@ article {
 .blogs i {
     display: inline-block;
     width: 3px;
-    height: 20px;
-    line-height: 20px;
+    height: 1.4rem;
     background: #0ae;
 }
 .blogs h3 {
-    line-height: 20px;
+    line-height: 4rem;
     display: inline-block;
-    margin-left: 17px;
-    font-size: 2rem;
+    margin-left: 1rem;
+    font-size: 1.4rem;
 }
 .blogs h3 a:hover,
 .blogs h3 a:active {
     color: #0ae;
     text-decoration: none;
 }
-.blogs span {
-    padding: 0 15px;
+.blogs .content{
+    width: 95%;
+    margin:0 auto 5px;
+    padding:0px 0px 15px;
 }
-.blogs .piclist{
-    display: block;
-}
-.blogs .piclist a {
-    display: block;
-    width: 100%;
-}
-.blogs .piclist a li{
-    display: inline-block;
-    width: 210px;
+.blogs .content .pic{
+    float: left;
+    width: 150px;
+    margin-right: 10px;
     overflow: hidden;
 }
-.blogs .piclist a li + li {
-    margin-left: 5px;
-}
-.blogs .piclist a li img {
-    width: 100%;
+.blogs .content .pic img {
+    width: 150px;
     transition: all 1s;  
 }
-.blogs .piclist a li img:hover {
+.blogs .content .pic img:hover {
     transform: scale(1.08);
 }
-.blogs .bigpic{
-    display: block;
-    width: 650px;
-    height: 200px;
-}
-.blogs .bigpic a{
-    display: block;
-    height: 200px;
-    overflow: hidden;
-}
-.blogs .bigpic a img{
-    width: 100%;
-}
-.blogs .bigpic a img:hover {
-    -webkit-filter: contrast(120%); /* Chrome, Safari, Opera */
-    filter: contrast(120%);
-    -webkit-filter: brightness(110%); /* Chrome, Safari, Opera */
-    filter: brightness(110%);
-}
-.blogs p {
-    padding: 0 15px;
+.blogs .content .summary{
     color: #666;
-    font-size: 1.4rem;
+    font-size: 1rem;
 }
-.blogs .info ul li{
+.blogs .content .info{
+    width: 95%;
+    margin:0 auto;
+    padding:20px 0px 0px;
+}
+.blogs .content .info ul li{
     display: inline-block;
-    padding: 0 15px 20px;
+    padding: 0 15px;
     color: #666666; 
 }
-.blogs .info ul li span {
+.blogs .content .info ul li span {
     padding: 0px;
 }
 /*网站右侧内容*/
-.right-nav {
-    width: 300px;
-    float: right;
-}
-.right-nav section {
-    margin-bottom: 20px;
-    font-style: normal;
-}
-.right-nav section > span {
-    display: inline-block;
-    width: 100%;
-    line-height: 2.5rem;
-    background-color: #FFF;
-    font-size: 1.4rem;
-    font-weight: bold;
-    text-indent:1.5em;
-}
-/*精选话题*/
-.topic {
-    height: 408px;
-    background-color: #f7f7f7;
-}
-.topic li {
-    width: 100%;
-    height:200px; 
-    position: relative;
-}
-.topic li:last-child{
-    margin-top: 8px;
-}
-.topic li i{
-    display: block;
-    overflow: hidden;
-}
-.topic li i img {
-    width: 100%;
-    height: 200px;
-}
-.topic li i img:hover {
-    -webkit-filter: contrast(120%); /* Chrome, Safari, Opera */
-    filter: contrast(120%);
-    -webkit-filter: brightness(110%); /* Chrome, Safari, Opera */
-    filter: brightness(110%);
-}
-.topic li span {
-    display: block;
-    background: rgba(0,170,238,0.8); 
-    font-size: 12px;
-    font-style: normal;
-    border-radius: 3px;
-    padding: 5px 8px;
-    color: #FFF;
-    position: absolute;
-    top: 10px;
-    left: 10px;
-}
-.topic li h2 {
-    font-style: normal;
-    position: absolute;
-    bottom: 10px;
-    left: 10px;
-    color: #FFF;
-}
-/*博主简介*/
-.about-me .user-info {
-    padding: 10px;
-    background-color: #f7f7f7;
-}
-.about-me .user-info img {
-    float: left;
-    width: 120px;
-    height: 80px;
-    border-radius: 10px;
-    overflow: hidden;
-    margin-right: 10px;
-}
-.about-me .user-info p {
-    margin-top:-1px;
-    font-size: 1.4rem;
-    line-height: 1.6rem;
-    color: #666666;
-}
-/*文章分类*/
-.group ul {
-    padding: 10px 20px;
-    background-color: #f7f7f7;
-}
-.group ul li a {
-    line-height: 2.5rem;
-    font-size: 1.5rem;
-}
-/*点击排行与文章推荐*/
-.recommend span a:first-child {
-    padding-right: 1em;
-}
-.recommend span a:last-child {
-    padding-left: 1em;
-    border-left: 1px solid #ccc;
-}
-.recommend ul {
-    display: block;
-    padding: 10px 15px;
-    background-color: #f7f7f7;
-}
-.recommend ul li a{
-    display: block;
-    font-size: 1.5rem;
-    line-height: 2.5rem;
-    white-space: nowrap;
-    overflow: hidden;
-    text-overflow: ellipsis;
-}
-
-.concern ul{
-    display: block;
-    width: 280px;
-    padding: 10px;
-    background-color: #f7f7f7;
-    overflow: hidden;
-}
-.concern ul img {
-    width: 100%;
-    transition: all 1s;  
-}
-.concern ul img:hover {
-    transform: scale(1.1);
-}
-
-
-
-
-
-
-
