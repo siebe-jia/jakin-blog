@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=Edge，chrome=1">
+    <title>{$info.title}-Jakin极客说</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="/static/css/normalize.css">
+    <link rel="stylesheet" href="/static/css/base.css">
+    <link rel="stylesheet" href="/static/css/blog.css">
+    <script src="/static/js/vendor/jquery.min.js"></script>
+    <script src="/static/js/vendor/jquery.easyfader.min.js"></script>
+    <script src="/static/js/vendor/scrollReveal.js"></script>
+    <script src="/static/js/vendor/hc-sticky.js"></script>
+    <script src="/static/js/main.js"></script>
+</head>
+
+<body>
+    <!--[if lte IE8]>
+<p class="browserupgrade">您的浏览器版本太低，请到<a href="http://browserhappy.com">这里</a>更新。</p>
+<![endif]-->
+    <header id="header">
+        <nav class="top clearfix">
+            <div class="logo"><a href="/">Jakin极客说</a></div>
+            <span class="navicon"></span>
+            <ul>
+                <li> <a href="/">网站首页</a></li>
+                <li> <a href="/" {eq name="info.type" value="学无止境"}class="current"{/eq}>学无止境</a></li>
+                <li> <a href="/" {eq name="info.type" value="博客日记"}class="current"{/eq}>博客日记</a></li>
+                <li> <a href="/">关于我</a></li>
+                <li> <a href="/" target="_blank">时间轴</a></li>
+            </ul>
+            <!-- <div class="search-form">
+                <form class="search-box" style="display:none;">
+                    <input type="text">
+                </form>
+                <span><img src="./image/searchbg.png"></span>
+            </div> -->
+        </nav>
+    </header>
+    <div class="container clearfix">
+        <article>
+            <div class="artilce">
+                <h2 class="title">{$info.title}</h2>
+                <div class="info">
+                    <ul>
+                        <li class="label"><a href="#" target="_blank">{$info.type}</a></li>
+                        <li class="time">{$info.create_time}</li>
+                        <li class="view"><span>{$info.look}</span>已阅读</li>
+                    </ul>
+                </div>
+                <div class="content">
+                    {$info.content|raw}
+                </div>
+                <div class="share">
+                    <img src="/static/image/qq.png">
+                    <p>扫描加入QQ群，一起交流学习web开发技术</p>
+                    <p>本文地址：<a href="{$url}"
+                            target="_blank">{$url}</a></p>
+                </div>
+                <div class="nextinfo">
+                    <p>上一篇：<a href="#">图效果，我采用如下方法</a></p>
+                    <p>下一篇：<a href="#">图效果，我采用如下方法</a></p>
+                </div>
+            </div>
+            <div class="otherlink">
+
+                <div class="news-title">
+                    <h2>相关文章</h2>
+                </div>
+                <ul>
+                    {volist name="correlation" id="vo" }
+                    <li><a href="./blog/{$vo.id + 1024}.html" title="{$vo.title}">{$vo.title}</a></li>
+                    {/volist}
+                </ul>
+            </div>
+        </article>
+        <aside class="right-nav">
+            <section class="topic">
+                <li>
+                    <a href="#">
+                        <i><img src="/static/image/p3.jpg"><i>
+                                <h2>【匆匆难年】总结个人入门IT经历...</h2>
+                                <span>博客日记</span>
+                    </a>
+                </li>
+                <li>
+                    <a href="#">
+                        <i><img src="/static/image/p4.jpg"></i>
+                        <h2>【大学时光】如何度过你的大学时光...</h2>
+                        <span>学无止境</span>
+                    </a>
+                </li>
+            </section>
+            <section class="recommend">
+                <span id="tab">
+                    <a href="#" class="current">点击排行</a>
+                    <a href="#">站长推荐</a>
+                </span>
+                <div id="content">
+                    <ul>
+                        {volist name="recommend[0]" id="vo" }
+                        <li><a href="./blog/{$vo.id + 1024}.html" title="{$vo.title}">{$vo.title}</a></li>
+                        {/volist}
+                    </ul>
+                    <ul style="display:none;">
+                        {volist name="recommend[1]" id="vo" }
+                        <li><a href="./blog/{$vo.id + 1024}.html" title="{$vo.title}">{$vo.title}</a></li>
+                        {/volist}
+                    </ul>
+                </div>
+            </section>
+            <section class="group">
+                    <span>文章分类</span>
+                    <ul>
+                        <li><a href="/">学无止境（{$count[0]}）</a></li>
+                        <li><a href="/">博客日记（{$count[1]}）</a></li>
+                    </ul>
+            </section>
+            <section class="concern">
+                <span>扫描加入QQ群</span>
+                <ul>
+                    <img src="/static/image/qq.png">
+                </ul>
+            </section>
+        </aside>
+    </div>
+    <footer>
+        <p>Design by <a href="#" target="_blank">极客说 </a>辽ICP备</p>
+    </footer>
+</body>
+
+</html>

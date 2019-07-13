@@ -1,0 +1,184 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=Edge，chrome=1">
+    <title>Jakin极客说-个人博客网站</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="./static/css/normalize.css">
+    <link rel="stylesheet" href="./static/css/base.css">
+    <link rel="stylesheet" href="./static/css/index.css">
+    <script src="./static/js/vendor/jquery.min.js"></script>
+    <script src="./static/js/vendor/jquery.easyfader.min.js"></script>
+    <script src="./static/js/vendor/scrollReveal.js"></script>
+    <script src="./static/js/vendor/hc-sticky.js"></script>
+    <script src="./static/js/main.js"></script>
+</head>
+
+<body>
+    <!--[if lte IE8]>
+<p class="browserupgrade">您的浏览器版本太低，请到<a href="http://browserhappy.com">这里</a>更新。</p>
+<![endif]-->
+    <header id="header">
+        <nav class="top clearfix">
+            <div class="logo"><a href="/">Jakin极客说</a></div>
+            <span class="navicon"></span>
+            <ul>
+                <li> <a href="#" class="current">网站首页</a></li>
+                <li> <a href="/">学无止境</a></li>
+                <li> <a href="/">博客日记</a></li>
+                <li> <a href="/">关于我</a></li>
+                <li> <a href="/" target="_blank">时间轴</a></li>
+            </ul>
+            <!-- <div class="search-form">
+                <form class="search-box" style="display:none;">
+                    <input type="text">
+                </form>
+                <span><img src="./image/searchbg.png"></span>
+            </div> -->
+        </nav>
+    </header>
+    <div class="container clearfix">
+        <article>
+            <div class="banner">
+                <div id="banner" class="fader">
+                    <li class="slide">
+                        <a href="/" target="_blank">
+                            <img src="./static/image/p3.jpg">
+                                <span class="imginfo">个人博客，属于我的小世界！</span>
+                        </a>
+                    </li>
+                    <li class="slide">
+                        <a href="/" target="_blank">
+                            <img src="./static/image/p2.jpg">
+                                <span class="imginfo">网页中图片属性固定宽度，如何用js改变大小</span>
+                        </a>
+                    </li>
+                    <div class="fader_controls">
+                        <div class="page prev" data-target="prev">&lsaquo;</div>
+                        <div class="page next" data-target="next">&rsaquo;</div>
+                        <ul class="pager_list">
+                        </ul>
+                    </div>
+                </div>
+            </div>
+            <section class="news-box clearfix">
+                <ul>
+                    <li>
+                        <span><a href="#" target="_blank"><img src="./static/image/1.jpg"></a></span>
+                        <h3><a href="#" target="_blank">html5 个人博客模板《青春的回忆》</a></h3>
+                    </li>
+                    <li>
+                        <span><a href="#" target="_blank"><img src="./static/image/2.jpg"></a></span>
+                        <h3><a href="#" target="_blank">html5 个人博客模板《青春的回忆》</a></h3>
+                    </li>
+                    <li>
+                        <span><a href="#" target="_blank"><img src="./static/image/3.jpg"></a></span>
+                        <h3><a href="#" target="_blank">html5 个人博客模板《青春的回忆》</a></h3>
+                    </li>
+                    <li>
+                        <span><a href="#" target="_blank"><img src="./static/image/4.jpg"></a></span>
+                        <h3><a href="#" target="_blank">html5 个人博客模板《青春的回忆》</a></h3>
+                    </li>
+                </ul>
+            </section>
+            <section class="blogtab">
+                <ul>
+                    <li><a href="">最新文章</a></li>
+                    <li><a href="">热门文章</a></li>
+                    <li><a href="">推荐阅读</a></li>
+                </ul>
+            </section>
+            {volist name="articleList" id="vo" }
+                <section class="blogs" data-scroll-reveal="enter bottom over 1s" data-scroll-reveal-id="            {$i+1}"
+                style="-webkit-transform: translatey(24px);transform: translatey(24px);opacity: 0;-webkit-transition: -webkit-transform 1s ease-in-out 0s,  opacity 1s ease-in-out 0s;transition: transform 1s ease-in-out 0s,  opacity 1s ease-in-out 0s;perspective: 1000;backface-visibility: hidden;"
+                data-scroll-reveal-initialized="true">
+                    <i></i>
+                    <h3 class="title">
+                        <a href="./blog/{$vo.id + 1024}.html">{$vo.title}</a>
+                    </h3>
+                    <div class="content clearfix">
+                        {volist name="vo['image_list']" id="item" }
+                        <div class="pic">
+                            <img src="{$item.url}" alt="">
+                        </div>
+                        {/volist}
+                        <div class="summary">
+                                {$vo.summary}
+                        </div>
+                        <div class="info">
+                            <ul>
+                                <li class="label"><a href="#" target="_blank">{$vo.type}</a></li>
+                                <li class="time">{$vo.create_time}</li>
+                                <li class="view"><span>{$vo.look}</span>已阅读</li>
+                            </ul>
+                        </div>
+                    </div>
+                </section>
+            {/volist}
+        </article>
+        <aside class="right-nav">
+            <section class="topic">
+                <li>
+                    <a href="#">
+                        <i><img src="/static/image/p3.jpg"><i>
+                                <h2>【匆匆难年】总结个人入门IT经历...</h2>
+                                <span>博客日记</span>
+                    </a>
+                </li>
+                <li>
+                    <a href="#">
+                        <i><img src="/static/image/p4.jpg"></i>
+                        <h2>【大学时光】如何度过你的大学时光...</h2>
+                        <span>学无止境</span>
+                    </a>
+                </li>
+            </section>
+            <section class="about-me">
+                <span>博主简介</span>
+                <div class="user-info">
+                    <img src="/static/image/face.jpg">
+                    <p><b>jakin</b>，在校大学生一枚。爱生活，爱自由！喜欢捣鼓计算机，热衷于前端开发。</p>
+                </div>
+            </section>
+            <section class="group">
+                <span>文章分类</span>
+                <ul>
+                    <li><a href="/">学无止境（{$count[0]}）</a></li>
+                    <li><a href="/">博客日记（{$count[1]}）</a></li>
+                </ul>
+            </section>
+            <section class="recommend">
+                <span id="tab">
+                    <a href="#" class="current">点击排行</a>
+                    <a href="#">站长推荐</a>
+                </span>
+                <div id="content">
+                    <ul>
+                        {volist name="recommend[0]" id="vo" }
+                            <li><a href="./blog/{$vo.id + 1024}.html" title="{$vo.title}">{$vo.title}</a></li>
+                        {/volist}
+                    </ul>
+                    <ul style="display:none;">
+                        {volist name="recommend[1]" id="vo" }
+                            <li><a href="./blog/{$vo.id + 1024}.html" title="{$vo.title}">{$vo.title}</a></li>
+                        {/volist}
+                    </ul>
+                </div>
+            </section>
+            <section class="concern">
+                <span>扫描加入QQ群</span>
+                <ul>
+                    <img src="./static/image/qq.png">
+                </ul>
+            </section>
+        </aside>
+
+    </div>
+    <footer>
+        <p>Design by <a href="#" target="_blank">极客说 </a>辽ICP备</p>
+    </footer>
+</body>
+
+</html>

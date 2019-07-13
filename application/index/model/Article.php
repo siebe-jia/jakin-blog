@@ -43,4 +43,24 @@ class Article extends BaseModel
             ->select();
         return $articleList;
     }
+    public static function getArticleCountByType($type){
+        $count = self::where('type','=',$type)->count();
+        return $count;
+    }
+    public static function getArticleInfoByParam($param){
+        $article = self::field(['id','title'])
+            ->order($param,'DESC')
+            ->limit(0,5)
+            ->select();
+        return $article;
+    }
+    public static function getArticleInfoByType($type){
+        $data = ['学无止境'=>1,'博客日记'=>2];
+        $article = self::field(['id','title'])
+            ->where('type','=',$data[$type])
+            ->order('create_time','DESC')
+            ->limit(0,5)
+            ->select();
+        return $article;
+    }
 }
